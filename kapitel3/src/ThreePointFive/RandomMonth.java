@@ -1,7 +1,12 @@
 package ThreePointFive;
+import java.time.Month;
+import java.util.Random;
 
 public class RandomMonth {
     public static void main(String[] args) {
-        System.out.println();
+        Random ran = new Random();
+        int number = ran.nextInt(13) + 1;
+        Month month = Month.of(number);
+        System.out.println(month);
     }
 }
