@@ -11,7 +11,7 @@ import java.util.Scanner;
  which represents head or tail. The program prompts the user to enter a guess, and
  reports whether the guess is correct or incorrect.
  */
-public class HeadsOrTails {
+public class UI {
 
     public static void main(String[] args) {
         Random ran = new Random();
@@ -21,6 +21,7 @@ public class HeadsOrTails {
         String guess = scan.nextLine().strip().toUpperCase();
 
         String flip = method.flipCoin();
+        System.out.println("I flipped " + flip);
 
         System.out.println("Did you guess correct?[Y/N]");
         String guessCorrect = scan.nextLine().strip().toUpperCase();

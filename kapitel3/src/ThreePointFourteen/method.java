@@ -13,7 +13,7 @@ public class method {
         Scanner scan = new Scanner(System.in);
         Face[] faces = Face.values();
         String flip = faces[ran.nextInt(2)].toString().toUpperCase();
-        System.out.println("I flipped " + flip);
+
         return flip;
     }
     static String checkWinner(String guessCorrect, String flip, String guess){

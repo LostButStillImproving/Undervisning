@@ -16,10 +16,6 @@ public class EvenOrOddNumber {
 
         System.out.print("Enter an integer: ");
         int number = scan.nextInt();
-        int oddOrNot = number%2;
-        switch (oddOrNot){
-            case 1 -> System.out.println("The number is odd");
-            case 0 -> System.out.println("The number is even");
-        }
+        System.out.println(method.run(number));
     }
 }
