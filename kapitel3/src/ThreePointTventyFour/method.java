@@ -2,7 +2,7 @@ package ThreePointTventyFour;
 
 import java.util.Random;
 
-public class PickACard {
+public class method {
     public enum Suit {
         Clubs,
         Diamond,
@@ -24,13 +24,12 @@ public class PickACard {
         QUEEN,
         KING
     }
-    public static void main(String[] args) {
+    static String run(){
         Random ran = new Random();
         Rank[] ranks = Rank.values();
         Suit[] suits = Suit.values();
         String suit = suits[ran.nextInt(4)].toString();
         String rank = ranks[ran.nextInt(13)].toString();
-
-        System.out.println("The card you picked is a " + rank + " of " + suit);
+        return "The card you picked is a " + rank + " of " + suit;
     }
 }

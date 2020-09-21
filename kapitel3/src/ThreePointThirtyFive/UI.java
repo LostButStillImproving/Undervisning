@@ -8,8 +8,7 @@ import java.util.Scanner;
  displays whether the integer is an odd number or not. Here are the sample runs:
  */
 
-public class EvenOrOddNumber {
-
+public class UI {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
