@@ -8,21 +8,14 @@ import java.util.Scanner;
  prompt the user to enter the number of days after today for a future day and display
  the future day of the week
   */
-public class DaysFromToday {
+public class UI {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
-        System.out.println("Enter todays date: ");
+        System.out.println("Enter todays day: ");
         int today = scan.nextInt();
         System.out.println("Enter the number of days elapsed since today: ");
         int days = scan.nextInt();
-        DayOfWeek currentDay;
-        if (today == 0) {
-            currentDay = DayOfWeek.of(today + 1);
-        } else {
-            currentDay = DayOfWeek.of(today);
-        }
-        DayOfWeek futureDay = currentDay.plus(days);
-        System.out.println("Today is " + currentDay + " and the future day is " + futureDay);
+
+        System.out.println(method.run(today, days));
     }
 }
