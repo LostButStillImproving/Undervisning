@@ -10,9 +10,6 @@ for the numbers 1, 2, . . . , 12, accordingly.
 
 public class RandomMonth {
     public static void main(String[] args) {
-        Random ran = new Random();
-        int number = ran.nextInt(13) + 1;
-        Month month = Month.of(number);
-        System.out.println(month);
+        System.out.println(method.run());
     }
 }
