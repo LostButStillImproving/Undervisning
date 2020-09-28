@@ -5,31 +5,13 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        Studerende Mike = new Studerende();
-        Studerende Mikkel = new Studerende();
-        Studerende Kim = new Studerende();
-        Studerende Anders = new Studerende();
-        Studerende Mathias = new Studerende();
+        Studerende Mikkel = new Studerende("Mikkel",27, "Randers Regnskov", "Datamatiker");
+        Studerende Kim = new Studerende("Kim", 29);
+        Studerende Anders = new Studerende("Anders", 26, "Næstved");
+        Studerende Mathias = new Studerende("Mathias", 23);
+        Studerende Mike = new Studerende("Mike", 29);
 
-        Mike.age = 29;
-        Mike.city = "Næstved";
-        Mike.name = "Mike";
 
-        Mikkel.age = 27;
-        Mikkel.city = "Randers Regnskov";
-        Mikkel.name = "Mikkel";
-
-        Kim.age = 29;
-        Kim.city = "Næstved";
-        Kim.name = "Kim";
-
-        Anders.age = 26;
-        Anders.city = "Vordingbord";
-        Anders.name = "Anders";
-
-        Mathias.age = 23;
-        Mathias.city = "Næstved";
-        Mathias.name = "Mathias";
 
         Boolean done = false;
         while (!done) {

@@ -2,14 +2,24 @@ public class Studerende {
 
     String name;
     int age;
-    String city;
-    String major;
-
-    Studerende(){
+    String city = "Næstved";
+    String major = "Datamatiker";
+    Studerende(String name, int age, String city, String major){
         this.name = name;
         this.age = age;
         this.city = city;
-        this.major = "Datamatiker";
+        this.major = major;
+    }
+
+    Studerende(String name, int age, String city) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+    }
+
+    Studerende(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public int getAge() {
