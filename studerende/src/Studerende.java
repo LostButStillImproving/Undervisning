@@ -3,7 +3,7 @@ public class Studerende {
     String name;
     int age;
     String city;
-    String major = "Datamatiker";
+    String major;
 
     Studerende(){
         this.name = name;

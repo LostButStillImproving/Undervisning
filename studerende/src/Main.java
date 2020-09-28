@@ -38,23 +38,23 @@ public class Main {
                 String student = scan.nextLine();
                 switch (student) {
                     case "Mike" -> {
-                        System.out.println("Mike is " + Mike.age + " years old"); done = true;
+                        System.out.println("Mike is " + Mike.getAge() + " years old"); done = true;
                     }
                     case "Anders" -> {
-                        System.out.println("Anders is " + Anders.age + " years old"); done = true;
+                        System.out.println("Anders is " + Anders.getAge() + " years old"); done = true;
                     }
                     case "Mikkel" -> {
-                        System.out.println("Mikkel is " + Mikkel.age + " years old"); done = true;
+                        System.out.println("Mikkel is " + Mikkel.getAge() + " years old"); done = true;
                     }
                     case "Kim" -> {
-                        System.out.println("Kim is " + Kim.age + " years old"); done = true;
+                        System.out.println("Kim is " + Kim.getAge() + " years old"); done = true;
                     }
                     case "Mathias" -> {
-                        System.out.println("Mathias is " + Mathias.age + " years old"); done = true;
+                        System.out.println("Mathias is " + Mathias.getAge() + " years old"); done = true;
                     }
                     default -> throw new IllegalStateException();
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("This student isnt't a member");
             }
         }
