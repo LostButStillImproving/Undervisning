@@ -4,6 +4,8 @@ public class Studerende {
     int age;
     String city = "Næstved";
     String major = "Datamatiker";
+    Studerende(){
+    }
     Studerende(String name, int age, String city, String major){
         this.name = name;
         this.age = age;
