@@ -2,7 +2,7 @@ package FivePointSeven;
 
 public class TuitionCalculatorTest {
 
-    public static void main(String[] args) throws TuitionCalculator.NotAPositiveInt {
+    public static void main(String[] args) throws TuitionCalculator.NotAPositiveNumber {
 
         double expectedResult;
         double result;
