@@ -7,8 +7,9 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int score;
         while(true) {
-
-            String result = Method.checkScore();
+            System.out.println("Enter your score: ");
+            score = scan.nextInt();
+            String result = Method.checkScore(score);
 
             if (result.equals("break")){
                 break;
