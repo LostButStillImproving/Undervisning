@@ -7,14 +7,12 @@ import java.util.Scanner;
 
 public class StudentCreator {
 
-
     public static class Student {
         String name;
         int age;
-
-        public Student(String name, int age ) {
+        public Student(String name, int score) {
             this.name = name;
-            this.age = age;
+            this.age = score;
         }
     }
 
@@ -28,20 +26,24 @@ public class StudentCreator {
             System.out.println("What's the name of the student?");
             nameCreate = scanner.nextLine();
             System.out.println("Whats the age of the student?");
-            ageCreate = scanner.nextInt();
+            ageCreate = Integer.parseInt(scanner.nextLine());
             nameAndAge.put(nameCreate, ageCreate);
         }
         return nameAndAge;
     }
-    static ArrayList<Student> create(HashMap nameAndAge){
+    static ArrayList<Student> createStudentArrayList(HashMap nameAndScore){
         ArrayList students = new ArrayList();
-        nameAndAge.forEach((key, value) -> students.add(new Student(key.toString(), (Integer) value)));
+        nameAndScore.forEach((key, value) -> students.add(new Student(key.toString(), (Integer) value)));
+        return students;
+    }
+    static ArrayList<Student> createStudentArrayList(Map nameAndScore){
+        ArrayList students = new ArrayList();
+        nameAndScore.forEach((key, value) -> students.add(new Student(key.toString(), (Integer) value)));
         return students;
     }
 
     public static void main(String[] args) {
         HashMap studentshash = createStudentHashMap(2);
-        ArrayList students = create(studentshash);
-        System.out.println(students);
+        System.out.println(studentshash);
     }
 }
