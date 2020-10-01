@@ -21,12 +21,14 @@ public class StudentCreator {
 
     static HashMap createStudentHashMap(int numberOfStudents) {
         Scanner scanner = new Scanner(System.in);
+        int ageCreate;
+        String nameCreate;
         HashMap<String, Integer> nameAndAge = new HashMap<String, Integer>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < numberOfStudents; i++) {
             System.out.println("What's the name of the student?");
-            String nameCreate = scanner.nextLine();
+            nameCreate = scanner.nextLine();
             System.out.println("Whats the age of the student?");
-            int ageCreate = scanner.nextInt();
+            ageCreate = scanner.nextInt();
             nameAndAge.put(nameCreate, ageCreate);
         }
         return nameAndAge;
@@ -41,6 +43,5 @@ public class StudentCreator {
         HashMap studentshash = createStudentHashMap(2);
         ArrayList students = create(studentshash);
         System.out.println(students);
-
     }
 }
