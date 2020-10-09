@@ -7,6 +7,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int score;
         while(true) {
+
             System.out.println("Enter your score: ");
             score = scan.nextInt();
             String result = Method.checkScore(score);

@@ -7,7 +7,7 @@ public class Method {
 
         if (score >= passingScore) {
             return "You pass the exam.";
-        } else if (score == -1)
+        } else if (score < 0)
             return "break";
         else return "You don't pass the exam.";
     }

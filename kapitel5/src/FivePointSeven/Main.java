@@ -1,7 +1,7 @@
 package FivePointSeven;
 
 public class Main {
-    public static void main(String[] args) throws TuitionCalculator.NotAPositiveNumber {
+    public static void main(String[] args) throws TuitionCalculator.NotAPositiveNumberException {
         TuitionCalculator calculator = new TuitionCalculator(10000, 1.06);
         System.out.print("Your tuition in 10 years is: ");
         System.out.println(calculator.calculateTuitionPerYear(0));

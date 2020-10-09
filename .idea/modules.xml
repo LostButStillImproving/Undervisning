@@ -3,11 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Miniprojekt1/Miniprojekt1.iml" filepath="$PROJECT_DIR$/Miniprojekt1/Miniprojekt1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kapitel6/SixPointTwo1.iml" filepath="$PROJECT_DIR$/kapitel6/SixPointTwo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StreamsFun/StreamsFun.iml" filepath="$PROJECT_DIR$/StreamsFun/StreamsFun.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Undervisning.iml" filepath="$PROJECT_DIR$/.idea/Undervisning.iml" />
       <module fileurl="file://$PROJECT_DIR$/kapitel1/kapitel1.iml" filepath="$PROJECT_DIR$/kapitel1/kapitel1.iml" />
       <module fileurl="file://$PROJECT_DIR$/kapitel2/kapitel2.iml" filepath="$PROJECT_DIR$/kapitel2/kapitel2.iml" />
       <module fileurl="file://$PROJECT_DIR$/kapitel3/kapitel3.iml" filepath="$PROJECT_DIR$/kapitel3/kapitel3.iml" />
       <module fileurl="file://$PROJECT_DIR$/kapitel4/kapitel4.iml" filepath="$PROJECT_DIR$/kapitel4/kapitel4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kapitel5/kapitel5.iml" filepath="$PROJECT_DIR$/kapitel5/kapitel5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zUnit/zUnit.iml" filepath="$PROJECT_DIR$/zUnit/zUnit.iml" />
     </modules>
   </component>
 </project>

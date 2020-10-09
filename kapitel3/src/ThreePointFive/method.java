@@ -2,6 +2,7 @@ package ThreePointFive;
 import java.time.DayOfWeek;
 
 public class method {
+    int a = 5;
     static String run(int today, int days) {
         DayOfWeek currentDay;
         if(today ==0)

@@ -1,15 +1,31 @@
 package FivePointSeven;
 
 public class TuitionCalculatorTest {
+    public static class CalculatorTest {
 
-    public static void main(String[] args) throws TuitionCalculator.NotAPositiveNumber {
+        public CalculatorTest() throws TuitionCalculator.NotAPositiveNumberException {
+        }
+
+        public static void main(String[] args) throws TuitionCalculator.NotAPositiveNumberException {
+            double startTuition = 100;
+            double interest = 1.06;
+            TuitionCalculator calculator = new TuitionCalculator(startTuition, interest);
+            //input 10, expected output 17908
+            int years = 10;
+            double expectedResult = 17908;
+            int result = (int) calculator.calculateTuitionPerYear(years);
+
+            assertTrue(result, expectedResult);
+        }
+    }
+
+    public static void main(String[] args) throws TuitionCalculator.NotAPositiveNumberException {
 
         double expectedResult;
         double result;
         double interest = 1.06;
         double startTuition = 10000;
         TuitionCalculator calculator = new TuitionCalculator(startTuition, interest);
-
 
         //input 10, expected output 17908
         int years = 10;
@@ -20,6 +36,7 @@ public class TuitionCalculatorTest {
 
         //input followYears = 2, fromYear = 10
         //expected output = 39104
+
         int followYears = 2;
         expectedResult = 39104;
         int fromYear = 10;

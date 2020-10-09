@@ -11,5 +11,6 @@ public class ExampleTests {
         opgaver calc = new opgaver();
         int result = calc.AddupToN(10);
         assertEquals(55,result);
+
     }
 }
