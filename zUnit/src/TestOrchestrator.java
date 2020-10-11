@@ -11,11 +11,9 @@ class TestOrchestrator {
         return single_instance;
     }
     private static class TestMethodGetter {
-        private static Method[] methods;
         static Method[] getTestMethods() throws ClassNotFoundException {
             Class c = Class.forName("tests1");
-            methods = c.getDeclaredMethods();
-            return methods;
+            return c.getDeclaredMethods();
         }
     }
     private static class TestMethodInvoker {
