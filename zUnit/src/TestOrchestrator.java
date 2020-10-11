@@ -16,13 +16,13 @@ class TestOrchestrator {
     private static Method[] methods;
     private static ArrayList<String> results = new ArrayList<>();
     private static ArrayList<String> methodNames = new ArrayList<>();
-    protected static class TestMethodGetter {
+    private static class TestMethodGetter {
         void getTestMethods(Class tests) throws ClassNotFoundException {
             Class c = tests.forName("tests1");
             methods = c.getDeclaredMethods();
         }
     }
-    protected static class TestMethodInvoker {
+    private static class TestMethodInvoker {
         void invoke(Method[] methods) throws InvocationTargetException, IllegalAccessException {
             for (Method m:methods
             ) {
@@ -32,7 +32,7 @@ class TestOrchestrator {
         }
 
     }
-    protected static class Summarizer{
+    private static class Summarizer{
         void printSummary(ArrayList results){
             for (int i = 0; i < results.size() ; i++) {
                 System.out.print(methodNames.get(i) + "\t");
