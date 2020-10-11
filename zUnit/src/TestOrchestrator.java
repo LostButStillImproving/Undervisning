@@ -12,7 +12,7 @@ class TestOrchestrator {
     }
     private static TestMethodGetter methodGetter = new TestMethodGetter();
     private static TestMethodInvoker methodInvoker = new TestMethodInvoker();
-    private static Summarizer Summasizer = new Summarizer();
+    private static Summarizer Summarizer = new Summarizer();
     private static Method[] methods;
     private static ArrayList<String> results = new ArrayList<>();
     private static ArrayList<String> methodNames = new ArrayList<>();
@@ -44,7 +44,7 @@ class TestOrchestrator {
         try {
             methodGetter.getTestMethods(tests.class);
             methodInvoker.invoke(methods);
-            Summasizer.printSummary(results);
+            Summarizer.printSummary(results);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
