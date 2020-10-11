@@ -13,9 +13,9 @@ class TestOrchestrator {
     private static TestMethodGetter methodGetter = new TestMethodGetter();
     private static TestMethodInvoker methodInvoker = new TestMethodInvoker();
     private static Summarizer Summarizer = new Summarizer();
-    private static Method[] methods;
     private static ArrayList<String> results = new ArrayList<>();
     private static ArrayList<String> methodNames = new ArrayList<>();
+    private static Method[] methods;
     private static class TestMethodGetter {
         void getTestMethods(Class tests) throws ClassNotFoundException {
             Class c = tests.forName("tests1");

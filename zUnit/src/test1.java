@@ -1,7 +1,7 @@
 import SixPointTwo.SumDigits;
 import com.testing.kapitel1.opgaver;
 
-public class tests {
+class tests1 {
     static String Test1(){
         SumDigits sumDigits = new SumDigits();
         int i = 10;
