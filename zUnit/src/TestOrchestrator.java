@@ -10,41 +10,40 @@ class TestOrchestrator {
         }
         return single_instance;
     }
-    private static TestMethodGetter methodGetter = new TestMethodGetter();
-    private static TestMethodInvoker methodInvoker = new TestMethodInvoker();
-    private static Summarizer Summarizer = new Summarizer();
-    private static ArrayList<String> results = new ArrayList<>();
-    private static ArrayList<String> methodNames = new ArrayList<>();
-    private static Method[] methods;
     private static class TestMethodGetter {
-        void getTestMethods(Class tests) throws ClassNotFoundException {
-            Class c = tests.forName("tests1");
+        private static Method[] methods;
+        static Method[] getTestMethods() throws ClassNotFoundException {
+            Class c = Class.forName("tests1");
             methods = c.getDeclaredMethods();
+            return methods;
         }
     }
     private static class TestMethodInvoker {
-        void invoke(Method[] methods) throws InvocationTargetException, IllegalAccessException {
+        public static  ArrayList<String> results = new ArrayList<>();
+        public static ArrayList<String> methodNames = new ArrayList<>();
+        static ArrayList<String> invoke(Method[] methods) throws InvocationTargetException, IllegalAccessException {
+
             for (Method m:methods
             ) {
                 methodNames.add(m.getName());
                 results.add(m.invoke(methods).toString());
             }
+            return results;
         }
 
     }
     private static class Summarizer{
-        void printSummary(ArrayList results){
+        static void printSummary(ArrayList<String> results){
             for (int i = 0; i < results.size() ; i++) {
-                System.out.print(methodNames.get(i) + "\t");
+                System.out.print(TestMethodInvoker.methodNames.get(i) + "\t");
                 System.out.println(results.get(i));
             }
         }
     }
     void run() throws InvocationTargetException, IllegalAccessException {
         try {
-            methodGetter.getTestMethods(tests.class);
-            methodInvoker.invoke(methods);
-            Summarizer.printSummary(results);
+            Method[] testMethods = TestMethodGetter.getTestMethods();
+            Summarizer.printSummary(TestMethodInvoker.invoke(testMethods));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

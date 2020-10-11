@@ -4,7 +4,7 @@ import com.testing.kapitel1.opgaver;
 class tests1 {
     static String Test1(){
         SumDigits sumDigits = new SumDigits();
-        int i = 10;
+        int i = 120;
         int result = sumDigits.sumDigits(i);
         int expectedResult = 1;
         return Assertions.assertEqual(result,expectedResult);
