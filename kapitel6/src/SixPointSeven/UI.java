@@ -15,13 +15,9 @@ public class UI {
         double annualInterestRate = Double.parseDouble(scan.nextLine());
         double monthlyInterestRate = annualInterestRate/12;
 
-
         System.out.println("Years\t\tFuture Value");
-        for (Integer i: IntStream.rangeClosed(1,10).boxed().collect(Collectors.toList())
-             ) {
-            System.out.print(i + "\t\t\t\t");
-            System.out.println(FutureInvestement.futureInvestmentValue(amountInvested, monthlyInterestRate, i));
-        }
-
+        IntStream.rangeClosed(1,10).forEach(i -> System.out.println(i + "\t\t\t" + FutureInvestement
+                                                      .futureInvestmentValue(  amountInvested,
+                                                                              monthlyInterestRate, i)));
     }
 }
