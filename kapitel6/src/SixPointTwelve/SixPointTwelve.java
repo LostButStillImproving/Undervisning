@@ -1,7 +1,5 @@
 package SixPointTwelve;
 
-import java.util.stream.IntStream;
-
 public class SixPointTwelve {
     public static void printNumbers(int num1, int num2, int numberPerLine) {
         for (int i = num1; i <= num2; i++) {

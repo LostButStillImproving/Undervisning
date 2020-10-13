@@ -1,4 +1,4 @@
-import SixPointTwelve.RandomCharacter;
+package SinxPointThirtyEight;
 
 public class SixPointThirtyEight {
 
