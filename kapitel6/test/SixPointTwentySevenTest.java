@@ -12,4 +12,12 @@ public class SixPointTwentySevenTest {
         Assert.assertEquals(result, expectedResult);
 
     }
+
+    @Test
+    static void isEmirpTest(){
+        int prime = 5;
+        Boolean result = Emirp.isEmirp(prime);
+        Boolean expectedResult = true;
+        Assert.assertEquals(result, expectedResult);
+    }
 }
