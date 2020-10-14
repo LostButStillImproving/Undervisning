@@ -8,8 +8,8 @@ class TestOrchestrator {
     }
     private static class TestMethodGetter {
         static Method[] getTestMethods() throws ClassNotFoundException {
-            Class c = Class.forName("tests1");
-            return c.getDeclaredMethods();
+            Class<?> testSuit = Class.forName("tests");
+            return testSuit.getDeclaredMethods();
         }
     }
     private static class TestMethodInvoker {
