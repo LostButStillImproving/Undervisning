@@ -5,8 +5,7 @@ import java.util.List;
 
 public class SumDigits {
     public int sumDigits(long n){
-        String digitsString = Long.toString(n);
-        String[] digitsArray = digitsString.split("");
+        String[] digitsArray = Long.toString(n).split("");
         List<Integer> listOfDigits = new ArrayList<>();
 
         for (String digit:digitsArray) {
