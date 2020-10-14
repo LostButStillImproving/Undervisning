@@ -46,7 +46,7 @@ public class Emirp {
             number++;
         }
     }
-     static void printSummary() {
+    public static void printSummary() {
         int i = 0;
          if (Emirp.primes.size() < 10){
              for (int j = 0; j < Emirp.primes.size() ; j++) {
