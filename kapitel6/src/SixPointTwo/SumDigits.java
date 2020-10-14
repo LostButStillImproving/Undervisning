@@ -2,20 +2,17 @@ package SixPointTwo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import java.util.function.IntBinaryOperator;
 
 public class SumDigits {
     public int sumDigits(long n){
         String digitsString = Long.toString(n);
         String[] digitsArray = digitsString.split("");
-        List<Integer> list= new ArrayList<Integer>();
+        List<Integer> listOfDigits = new ArrayList<>();
 
-        for (int i = 0; i < digitsArray.length; i++) {
-            list.add(Integer.parseInt(digitsArray[i]));
+        for (String digit:digitsArray) {
+            listOfDigits.add(Integer.parseInt(digit));
         }
-        int sum = list.stream().mapToInt(Integer::intValue).sum();
-        return sum;
+        return listOfDigits.stream().mapToInt(Integer::intValue).sum();
 
     }
 }
