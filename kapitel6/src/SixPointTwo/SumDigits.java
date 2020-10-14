@@ -12,6 +12,5 @@ public class SumDigits {
             listOfDigits.add(Integer.parseInt(digit));
         }
         return listOfDigits.stream().mapToInt(Integer::intValue).sum();
-
     }
 }
