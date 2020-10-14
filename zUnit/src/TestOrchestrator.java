@@ -3,12 +3,8 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 class TestOrchestrator {
-    private static TestOrchestrator single_instance = null;
-    public static TestOrchestrator getInstance(){
-        if (single_instance == null){
-            single_instance = new TestOrchestrator();
-        }
-        return single_instance;
+
+    private TestOrchestrator() {
     }
     private static class TestMethodGetter {
         static Method[] getTestMethods() throws ClassNotFoundException {
@@ -17,28 +13,31 @@ class TestOrchestrator {
         }
     }
     private static class TestMethodInvoker {
-        public static  ArrayList<String> results = new ArrayList<>();
+        public static  ArrayList<String> methodOutputs = new ArrayList<>();
         public static ArrayList<String> methodNames = new ArrayList<>();
         static ArrayList<String> invoke(Method[] methods) throws InvocationTargetException, IllegalAccessException {
 
             for (Method m:methods
             ) {
                 methodNames.add(m.getName());
-                results.add(m.invoke(methods).toString());
+                methodOutputs.add(m.invoke(methods).toString());
             }
-            return results;
+            return methodOutputs;
         }
 
     }
     private static class Summarizer{
-        static void printSummary(ArrayList<String> results){
-            for (int i = 0; i < results.size() ; i++) {
-                System.out.print(TestMethodInvoker.methodNames.get(i) + "\t");
-                System.out.println(results.get(i));
+        static void printSummary(ArrayList<String> methodOutputs){
+            int count = 0;
+            for (String output: methodOutputs
+                 ) {
+                System.out.print(TestMethodInvoker.methodNames.get(count) + "\t");
+                System.out.println(methodOutputs.get(count));
+                count++;
             }
         }
     }
-    void run() throws InvocationTargetException, IllegalAccessException {
+    static void run() throws InvocationTargetException, IllegalAccessException {
         try {
             Method[] testMethods = TestMethodGetter.getTestMethods();
             Summarizer.printSummary(TestMethodInvoker.invoke(testMethods));
