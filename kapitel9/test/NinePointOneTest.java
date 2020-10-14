@@ -7,7 +7,7 @@ public class NinePointOneTest {
     @Test
     public void createRectangleTest(){
         NinePointOne.rectangle r = new NinePointOne.rectangle();
-        Boolean isInstanceOf = false;
+        Boolean isInstanceOf;
         if (r instanceof NinePointOne.rectangle) {
             isInstanceOf = true;
         Assert.assertTrue(isInstanceOf);
@@ -20,7 +20,5 @@ public class NinePointOneTest {
         Double expectedResult = 4.0;
         Double result = r.getArea();
         Assert.assertEquals(expectedResult, result);
-
-
     }
 }
