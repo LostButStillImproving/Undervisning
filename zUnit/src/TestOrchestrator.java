@@ -37,7 +37,7 @@ class TestOrchestrator {
             }
         }
     }
-    static void run() throws InvocationTargetException, IllegalAccessException {
+    static void runTestSuite() throws InvocationTargetException, IllegalAccessException {
         try {
             Method[] testMethods = TestMethodGetter.getTestMethods();
             Summarizer.printSummary(TestMethodInvoker.invoke(testMethods));
