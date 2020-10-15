@@ -7,8 +7,8 @@ public class Fan {
 
     private int speed;
     private Boolean on = false;
-    private Double radius;
-    String colour = "blue";
+    private final Double radius;
+    String colour;
 
     Fan() {
         this.colour = "blue";
@@ -33,24 +33,8 @@ public class Fan {
         this.speed = speed;
     }
 
-    public Double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(Double radius) {
-        this.radius = radius;
-    }
-
-    public String getColour() {
-        return colour;
-    }
-
-    public void setColour(String colour) {
-        this.colour = colour;
-    }
-
     public String toString(){
-        if (this.on == true) {
+        if (this.on) {
             return "FAN SPEED: " + this.speed + " color: " + this.colour + " radius: " + this.radius;
         } else return "color: " + this.colour + " radius: " + this.radius + "\n" + "Fan is OFF";
 
