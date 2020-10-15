@@ -10,6 +10,12 @@ public class Fan {
     private Double radius;
     String colour = "blue";
 
+    Fan() {
+        this.colour = "blue";
+        this.speed = SLOW;
+        this.on = false;
+        this.radius = 5.0;
+    }
     Fan(int speed, String colour, double radius) {
         this.speed = speed;
         this.colour = colour;
@@ -54,7 +60,7 @@ public class Fan {
         Fan fan = new Fan(SLOW,"yellow", 10.);
         Fan fan1 = new Fan(FAST, "blue", 5.);
         Fan fan2 = new Fan(MEDIUM, "blue", 3.);
-
+        Fan fanDefault = new Fan();
         System.out.println(fan.toString());
         System.out.println(fan1.toString());
         System.out.println(fan2.toString());
@@ -65,6 +71,7 @@ public class Fan {
         System.out.println(fan.toString());
         System.out.println(fan1.toString());
         System.out.println(fan2.toString());
+        System.out.println(fanDefault.toString());
     }
 
 }
