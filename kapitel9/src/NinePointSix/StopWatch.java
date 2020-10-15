@@ -10,10 +10,12 @@ public class StopWatch {
     private Instant endTime;
 
     public Instant getStartTime() {
+
         return startTime;
     }
 
     public Instant getEndTime() {
+
         return endTime;
     }
     StopWatch(){
@@ -39,6 +41,7 @@ public class StopWatch {
         watch.stop();
 
         System.out.println(watch.getElapsedTime().getSeconds());
+        System.out.println(watch.endTime);
     }
 }
 
