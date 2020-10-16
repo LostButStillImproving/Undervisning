@@ -36,8 +36,8 @@ class TestOrchestrator {
     }
     static void runTestSuite() throws InvocationTargetException, IllegalAccessException {
         try {
-            Summarizer.printSummary(TestMethodInvoker
-                                                            .buildResults(TestMethodGetter.getTestMethods()));
+            Summarizer.printSummary(TestMethodInvoker.buildResults(
+                                                     TestMethodGetter.getTestMethods()));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
