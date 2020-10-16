@@ -1,7 +1,7 @@
 import SixPointTwo.SumDigits;
 import com.testing.kapitel1.opgaver;
 
-public class tests {
+public class TestSuite {
     static String Test1(){
         SumDigits sumDigits = new SumDigits();
         int i = 10;
@@ -12,7 +12,7 @@ public class tests {
     static String AddUpToNtest(){
         int i = 5;
         int result = opgaver.AddupToN(i);
-        int expectedResult = 14;
+        int expectedResult = 15;
         return Assertions.assertEqual(result,expectedResult);
     }
 }

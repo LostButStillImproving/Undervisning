@@ -1,9 +1,7 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 class TestOrchestrator {
 
@@ -11,30 +9,32 @@ class TestOrchestrator {
     }
     private static class TestMethodGetter {
         static Method[] getTestMethods() throws ClassNotFoundException {
-            Class<?> testSuit = Class.forName("tests");
+            Class<?> testSuit = Class.forName("TestSuite");
+
             return testSuit.getDeclaredMethods();
         }
     }
     private static class TestMethodInvoker {
-        public static  ArrayList<String> methodOutputs = new ArrayList<>();
-        public static ArrayList<String> methodNames = new ArrayList<>();
-        static Map<String, String> buildResults(Method[] methods) throws InvocationTargetException, IllegalAccessException {
-
-            for (Method m:methods
+        private static Map<String, String> buildResults(Method[] methods) {
+            Map<String,String> methodNameOutputMap = new HashMap<>();
+            for (Method method:methods
             ) {
-                methodNames.add(m.getName());
-                methodOutputs.add(m.invoke(methods).toString());
+                try {
+                    methodNameOutputMap.put(method.getName(), method.invoke(methods).toString());
+                } catch (IllegalAccessException | InvocationTargetException e) {
+                    e.printStackTrace();
+                }
             }
-            return IntStream.range(0, methodNames.size()).boxed()
-                    .collect(Collectors.toMap(methodNames::get, methodOutputs::get));
+
+            return methodNameOutputMap;
         }
     }
     private static class Summarizer{
         static void printSummary(Map<String, String> mapOfMethodNamesAndOutputs){
-            mapOfMethodNamesAndOutputs.forEach((k, v) -> System.out.println(k + "   " + v));
+            mapOfMethodNamesAndOutputs.forEach((k, v) -> System.out.printf( "%-15s %15s %n",k,v));
         }
     }
-    static void runTestSuite() throws InvocationTargetException, IllegalAccessException {
+    static void runTestSuite() {
         try {
             Summarizer.printSummary(TestMethodInvoker.buildResults(
                                                      TestMethodGetter.getTestMethods()));
