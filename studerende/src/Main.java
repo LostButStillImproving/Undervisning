@@ -4,12 +4,12 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
+        ArrayList<Studerende> studerende = new Arraylist(Studerende Mikkel = new Studerende("Mikkel",27, "Randers Regnskov", "Datamatiker"),
+                Studerende Kim = new Studerende("Kim", 29),
+                Studerende Anders = new Studerende("Anders", 26, "Næstved"),
+                Studerende Mathias = new Studerende("Mathias", 23),
+                Studerende Mike = new Studerende("Mike", 29));
 
-        Studerende Mikkel = new Studerende("Mikkel",27, "Randers Regnskov", "Datamatiker");
-        Studerende Kim = new Studerende("Kim", 29);
-        Studerende Anders = new Studerende("Anders", 26, "Næstved");
-        Studerende Mathias = new Studerende("Mathias", 23);
-        Studerende Mike = new Studerende("Mike", 29);
 
 
 

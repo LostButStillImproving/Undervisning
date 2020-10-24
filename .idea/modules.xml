@@ -12,7 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/kapitel4/kapitel4.iml" filepath="$PROJECT_DIR$/kapitel4/kapitel4.iml" />
       <module fileurl="file://$PROJECT_DIR$/kapitel5/kapitel5.iml" filepath="$PROJECT_DIR$/kapitel5/kapitel5.iml" />
       <module fileurl="file://$PROJECT_DIR$/kapitel9/kapitel9.iml" filepath="$PROJECT_DIR$/kapitel9/kapitel9.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zUnit/zUnit.iml" filepath="$PROJECT_DIR$/zUnit/zUnit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zUnit/zUnit/zUnit.iml" filepath="$PROJECT_DIR$/../zUnit/zUnit/zUnit.iml" />
     </modules>
   </component>
 </project>

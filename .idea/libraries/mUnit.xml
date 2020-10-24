@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mUnit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../mUnitfunctional/out/artifacts/mUnit_jar/mUnit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

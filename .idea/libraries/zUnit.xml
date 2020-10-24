@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zUnit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../zUnitt/out/artifacts/zUnit_jar/zUnit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

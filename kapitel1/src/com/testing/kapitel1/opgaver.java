@@ -1,5 +1,4 @@
 package com.testing.kapitel1;
-
 public class opgaver {
     //1.6
     public static int AddupToN(int n) {

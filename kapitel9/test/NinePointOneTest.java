@@ -17,7 +17,7 @@ public class NinePointOneTest {
     @Test
     public void getPerimiterTest(){
         NinePointOne.rectangle r = new NinePointOne.rectangle(2.0,2.0);
-        Double expectedResult = 4.0;
+        Double expectedResult = 3.0;
         Double result = r.getArea();
         Assert.assertEquals(expectedResult, result);
     }

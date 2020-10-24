@@ -19,5 +19,18 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="zUnit" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../mUnitfunctional/out/artifacts/mUnit_jar/mUnit.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="mUnit" level="project" />
+    <orderEntry type="library" name="mUnit1" level="project" />
+    <orderEntry type="library" name="zUnit" level="project" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>

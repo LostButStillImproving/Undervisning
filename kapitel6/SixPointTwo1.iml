@@ -20,5 +20,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="com.google.guava:guava:18.0" level="application" />
+    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>
