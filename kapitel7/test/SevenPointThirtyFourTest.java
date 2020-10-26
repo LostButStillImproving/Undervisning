@@ -5,7 +5,6 @@ public class SevenPointThirtyFourTest {
 
     @Test
     void sortTest(){
-        Sorter sorter = new Sorter();
         String input = "BCA";
         String expectedResult = "ABC";
         String result = Sorter.sort(input);

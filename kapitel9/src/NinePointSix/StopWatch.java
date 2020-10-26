@@ -39,7 +39,6 @@ public class StopWatch {
         watch.start();
         TimeUnit.SECONDS.sleep(3);
         watch.stop();
-
         System.out.println(watch.getElapsedTime().getSeconds());
         System.out.println(watch.endTime);
     }
