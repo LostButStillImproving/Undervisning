@@ -1,3 +1,5 @@
+package ThreePointThirtySomething;
+
 import java.util.Scanner;
 public class SorterUI {
 
@@ -6,7 +8,7 @@ public class SorterUI {
 
       System.out.println("Gimme a string to sort");
       String string = scan.nextLine();
-      System.out.println(Sorter.sort(string));;
+      System.out.println(Sorter.sort(string));
 
   }
 }
