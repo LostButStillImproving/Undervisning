@@ -1,4 +1,4 @@
-package ThreePointThirtySomething;
+package SevenPointThirtySomething;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ public class SevenPointThirtyFourTest {
     void sortTest(){
         String input = "BCA";
         String expectedResult = "ABC";
-        String result = Sorter.sort(input);
+        String result = Sorter.sortString(input);
         Assertions.assertEquals(expectedResult, result);
     }
 }
