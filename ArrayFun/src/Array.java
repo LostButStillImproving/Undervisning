@@ -3,31 +3,29 @@ import java.util.Random;
 
 class Array {
 
-    public enum COLORS {
-        RED, BLUE, BLACK
+    enum COLORS {
+        RED, BLUE, BLACK, PURPLE
     }
+    static ArrayList<COLORS> colorArrayList = new ArrayList<>();
 
-    public static <T extends Enum<?>> COLORS randomEnum(Class<COLORS> enumColors){
+    static COLORS randomColor(){
         Random random = new Random();
-        int x = random.nextInt(enumColors.getEnumConstants().length);
-        
-        return enumColors.getEnumConstants()[x];
+        return COLORS.values()[random.nextInt(COLORS.values().length)];
     }
-
-    public static ArrayList<COLORS> randomArray(){
+   static ArrayList<COLORS> randomArray(){
         Random random = new Random();
-        ArrayList<COLORS> colorArray = new ArrayList<>();
-        int randomLengthOfArray = random.nextInt(10);
+
+        int randomLengthOfArray = (random.nextInt(10) + 1);
 
         for (int i = 0; i < randomLengthOfArray; i++) {
-            colorArray.add(randomEnum(COLORS.class));
+
+            colorArrayList.add(randomColor());
         }
 
-        return colorArray;
+        return colorArrayList;
     }
 
     public static void main(String[] args) {
     randomArray().forEach(System.out::println);
-
     }
 }
