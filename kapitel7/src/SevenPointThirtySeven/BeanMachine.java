@@ -44,9 +44,10 @@ public class BeanMachine {
 
         for (int i = 1; i < paths.length() + 1 ; i++) {
             if (i % (slots.length - 1)  == 0) {
-                System.out.println(paths.charAt(i - 1) + "\n");
+                System.out.println(paths.charAt(i - 1));
             } else System.out.print(paths.charAt(i - 1));
         }
+
     }
     public void startGame(){
 

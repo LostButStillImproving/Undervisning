@@ -2,11 +2,12 @@ package TenPointOne;
 
 public class Time {
 
-    public long hour;
-    public long minute;
-    public long second;
+    private long hour;
+    private long minute;
+    private long second;
 
-    Time() {
+    Time(){
+
         long[] timeArray = currentTimeToArray(System.currentTimeMillis());
 
         this.hour = timeArray[0];
@@ -15,12 +16,14 @@ public class Time {
     }
 
     Time(long hour, long minute, long second){
+
         this.hour = hour;
         this.minute = minute;
         this.second = second;
     }
 
     Time(int passedTimeMilisecods) {
+
         long[] timeArray = currentTimeToArray(passedTimeMilisecods);
 
         this.hour = timeArray[0];
@@ -28,18 +31,22 @@ public class Time {
         this.second = timeArray[2];
     }
     public long getMinute() {
+
         return minute;
     }
 
     public long getSecond() {
+
         return second;
     }
 
     public long getHour() {
+
         return hour;
     }
     public void setTime(long passedMilliseconds) {
         long[] timeArray = currentTimeToArray(passedMilliseconds);
+
         this.hour = timeArray[0];
         this.minute = timeArray[1];
         this.second = timeArray[2];
@@ -60,6 +67,7 @@ public class Time {
 
     @Override
     public String toString(){
+
         return hour + ":" + minute + ":" + second;
     }
 
