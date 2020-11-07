@@ -3,7 +3,7 @@ package TenPointThree;
 import org.apache.commons.math3.primes.Primes;
 
 public class MyInteger {
-    private int value;
+    private final int value;
     public MyInteger(int i) {
         this.value = i;
     }
@@ -26,19 +26,11 @@ public class MyInteger {
     }
 
     public boolean isEven() {
-        if (this.value % 2 == 0) {
-
-            return true;
-        } else
-            return false;
+        return this.value % 2 == 0;
     }
 
     public static boolean isEven(int i) {
-        if (i % 2 == 0) {
-
-            return true;
-        } else
-            return false;
+        return i % 2 == 0;
     }
 
     public static boolean isEven(MyInteger myInteger) {
@@ -70,11 +62,7 @@ public class MyInteger {
     }
 
     public boolean equals(int i) {
-        if ( this.value == i) {
-
-            return true;
-        } else
-            return false;
+        return this.value == i;
     }
     public boolean equals(MyInteger myInteger){
         return equals(myInteger.value);
