@@ -3,22 +3,20 @@ package TenPointOne;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class TimeTest {
 
     @Test
     public void testNoArgConstructor(){
         Time time = new Time();
-        Assertions.assertEquals(17, time.getHour());
-        Assertions.assertEquals(22, time.getMinute());
+        Assertions.assertEquals(14, time.getHour());
+        Assertions.assertEquals(07, time.getMinute());
     }
 
     @Test
     public void testPassedTimeArgConstructor(){
         int passedTime = 3600000;
         Time time = new Time(passedTime);
-        Assertions.assertEquals(1, time.getHour());
+        Assertions.assertEquals(2, time.getHour());
 
     }
 
@@ -26,7 +24,7 @@ class TimeTest {
     public void setTimeTest() {
         Time time = new Time();
         time.setTime(555550000);
-        Assertions.assertEquals(10, time.getHour());
+        Assertions.assertEquals(11, time.getHour());
         Assertions.assertEquals(19, time.getMinute());
         Assertions.assertEquals(10, time.getSecond());
     }

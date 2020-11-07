@@ -60,7 +60,7 @@ public class Time {
         long currentMinute = totalMinutes % 60;
 
         long totalHours = totalMinutes / 60;
-        long currentHour = totalHours % 24;
+        long currentHour = totalHours % 24 + 1;
 
         return new long[]{currentHour, currentMinute, currentSecond};
     }
